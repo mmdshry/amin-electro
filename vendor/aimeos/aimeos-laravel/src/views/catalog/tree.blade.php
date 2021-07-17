@@ -8,6 +8,7 @@
     <?= $aiheader['catalog/price'] ?? '' ?>
     <?= $aiheader['catalog/supplier'] ?? '' ?>
     <?= $aiheader['catalog/attribute'] ?? '' ?>
+    <?= $aiheader['catalog/session'] ?? '' ?>
     <?= $aiheader['catalog/stage'] ?? '' ?>
     <?= $aiheader['catalog/lists'] ?? '' ?>
 @stop
@@ -17,22 +18,24 @@
     <?= $aibody['basket/mini'] ?? '' ?>
 @stop
 
-@section('aimeos_stage')
-    <?= $aibody['catalog/stage'] ?? '' ?>
-@stop
-
 @section('aimeos_nav')
     <?= $aibody['catalog/tree'] ?? '' ?>
     <?= $aibody['catalog/search'] ?? '' ?>
+@stop
+
+@section('aimeos_stage')
+    <?= $aibody['catalog/stage'] ?? '' ?>
 @stop
 
 @section('aimeos_body')
     <div class="container-fluid">
         <div class="row">
             <aside class="col-lg-3">
-                <?= $aibody['catalog/price'] ?? '' ?>
-                <?= $aibody['catalog/supplier'] ?? '' ?>
-                <?= $aibody['catalog/attribute'] ?? '' ?>
+                <div class="catalog-filter-group">
+                    <?= $aibody['catalog/price'] ?? '' ?>
+                    <?= $aibody['catalog/supplier'] ?? '' ?>
+                    <?= $aibody['catalog/attribute'] ?? '' ?>
+                </div>
                 <?= $aibody['catalog/session'] ?? '' ?>
             </aside>
             <div class="col-lg-9">

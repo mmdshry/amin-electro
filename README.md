@@ -1,62 +1,176 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+:star: Star us on [GitHub](https://github.com/aimeos/aimeos/stargazers) — it motivates us a lot! 😀
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Aimeos GitHub stats](https://github-readme-stats.vercel.app/api?username=aimeos&count_private=true&include_all_commits=true&show_icons=true&bg_color=90,103050,109095&title_color=fff&text_color=fff&icon_color=fff&hide=prs)
 
-## About Laravel
+<a href="https://aimeos.org/">
+    <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+</a>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Aimeos shop system
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![Total Downloads](https://poser.pugx.org/aimeos/aimeos/d/total.svg)](https://packagist.org/packages/aimeos/aimeos)
+[![License](https://poser.pugx.org/aimeos/aimeos/license.svg)](https://packagist.org/packages/aimeos/aimeos)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[Aimeos](https://aimeos.org/Laravel) is THE professional, full-featured and
+high performance e-commerce platform! You can install it within 5 minutes
+and can adapt, extend, overwrite and customize anything to your needs.
 
-## Learning Laravel
+[![Aimeos Laravel demo](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-github.png)](https://laravel.demo.aimeos.org)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Aimeos is a full-featured e-commerce package:
 
-## Laravel Sponsors
+* Multi vendor, multi channel and multi warehouse
+* From one to 1,000,000,000+ items
+* Extremly fast down to 20ms
+* For multi-tentant e-commerce SaaS solutions
+* Bundles, vouchers, virtual, configurable, custom and event products
+* Subscriptions with recurring payments
+* 100+ payment gateways
+* Full RTL support (frontend and backend)
+* Block/tier pricing out of the box
+* Extension for customer/group based prices
+* Discount and voucher support
+* Flexible basket rule system
+* Full-featured admin backend
+* Beautiful admin dashboard
+* Configurable product data sets
+* JSON REST API based on jsonapi.org
+* Completly modular structure
+* Extremely configurable and extensible
+* Extension for market places with millions of vendors
+* Fully SEO optimized including rich snippets
+* Translated to 30+ languages
+* AI-based text translation
+* Optimized for smart phones and tablets
+* Secure and reviewed implementation
+* High quality source code
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+... and [more Aimeos features](https://aimeos.org/features)
 
-### Premium Partners
+Check out the demos:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+* [Aimeos frontend demo](https://laravel.demo.aimeos.org)
+* [Aimeos admin demo](https://admin.demo.aimeos.org)
 
-## Contributing
+## Package only
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Want to **integrate Aimeos** into your **existing application**?
 
-## Code of Conduct
+Use the [Aimeos Laravel package](https://github.com/aimeos/aimeos-laravel) directly!
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Table of content
 
-## Security Vulnerabilities
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Frontend](#frontend)
+- [Backend](#backend)
+- [Customize](#customize)
+- [Multi-vendor](#multi-vendor)
+- [License](#license)
+- [Links](#links)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Requirements
+
+The Aimeos shop distribution requires:
+- Linux/Unix, WAMP/XAMP or MacOS environment
+- PHP >= 7.2
+- MySQL >= 5.7.8, MariaDB >= 10.2.2
+- Web server (Apache, Nginx or integrated PHP web server for testing)
+
+If required PHP extensions are missing, `composer` will tell you about the missing
+dependencies.
+
+If you want to **upgrade between major versions**, please have a look into the
+[upgrade guide](https://aimeos.org/docs/latest/laravel/setup/#upgrade)!
+
+## Installation
+
+To install the Aimeos shop application, you need [composer 2.1+](https://getcomposer.org).
+On the CLI, execute this command for a complete installation including a working setup:
+
+```
+wget https://getcomposer.org/download/latest-stable/composer.phar -O composer
+php composer create-project aimeos/aimeos myshop
+```
+
+You will be asked for the parameters of your database and mail server as well as an
+e-mail and password used for creating the administration account.
+
+In a local environment, you can use the integrated PHP web server to test your new Aimeos
+installation. Simply execute the following command to start the web server:
+
+```
+cd myshop
+php artisan serve
+```
+
+**Note:** In an hosting environment, the document root of your virtual host must point to
+the **/.../myshop/public/** directory and you have to change the `APP_URL` setting in your `.env`
+file to your domain without port, e.g.:
+
+```
+APP_URL=http://myhostingdomain.com
+```
+
+## Frontend
+
+After the installation, you can test the Aimeos shop frontend by calling the URL of your
+VHost in your browser. If you use the integrated PHP web server, you should browse
+this URL: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+[![Aimeos frontend](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-frontend.jpg?2021.07)](http://laravel.demo.aimeos.org/)
+
+## Backend
+
+The Aimeos administration interface will be available at `/admin` in your VHost. When using
+the integrated PHP web server, call this URL: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+
+[![Aimeos admin backend](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-backend.png?2021.04)](http://admin.demo.aimeos.org/)
+
+## Customize
+
+Laravel and the Aimeos e-commerce package are extremely flexible and highly customizable.
+A lot of documentation for the [Laravel framework](https://laravel.com) and the
+[Aimeos e-commerce framework](https://aimeos.org/docs/latest/laravel) exists. If you have questions
+about Aimeos, don't hesitate to ask in our [Aimeos forum](https://aimeos.org/help/).
+
+For more details about Aimeos Laravel integration, please have a look at its
+[repository](https://github.com/aimeos/aimeos-laravel).
+
+## Multi-vendor
+
+To enable multi-vendor features including self-registration for new sellers, add this
+settings to the `./myshop/.env` file:
+
+```
+SHOP_MULTISHOP=true
+SHOP_REGISTRATION=true
+```
+
+By default, newly registered sellers have administrator privileges in the backend for
+their own site. For a more limited access to the backend, you can change the permission
+level to "editor":
+
+```
+SHOP_PERMISSION=editor
+```
+
+You can change the permissions associated to "admin" or "editor" by adding your own version
+of the [JQAdm resource configuration](https://github.com/aimeos/ai-admin-jqadm/blob/master/config/admin/jqadm/resource.php)
+to the "admin" section of your `./config/shop.php` file.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Aimeos shop system is licensed under the terms of the MIT and LGPLv3 license and
+is available for free.
+
+## Links
+
+* [Web site](https://aimeos.org/Laravel)
+* [Documentation](https://aimeos.org/docs/latest/laravel)
+* [Forum](https://aimeos.org/help/laravel-package-f18/)
+* [Issue tracker](https://github.com/aimeos/aimeos/issues)
+* [Composer packages](https://packagist.org/packages/aimeos/aimeos)
+* [Source code](https://github.com/aimeos/aimeos)

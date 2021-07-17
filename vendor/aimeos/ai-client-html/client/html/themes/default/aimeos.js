@@ -1546,11 +1546,11 @@ AimeosCatalogFilter = {
 
 	setupLastSeenToggle: function() {
 
-		$(".catalog-session-seen").on("click", "h2", function(ev) {
+		$("body").on("click", ".catalog-session-seen h2", function(ev) {
 			$(".seen-items", ev.delegateTarget).slideToggle();
 		});
 
-		$(".catalog-session-pinned").on("click", "h2", function(ev) {
+		$("body").on("click", ".catalog-session-pinned h2", function(ev) {
 			$(".pinned-items", ev.delegateTarget).slideToggle();
 		});
 	},
@@ -1704,6 +1704,39 @@ AimeosCatalogFilter = {
 AimeosCatalogList = {
 
 	/**
+	 * Add to basket
+	 */
+	setupAddBasket: function() {
+
+		$(".catalog-list-items .list-items:not(.list) .product").on("click", ".btn-primary", function(ev) {
+
+			var empty = true;
+
+			$(".basket .items-selection .selection li, .basket .items-attribute .selection li", ev.delegateTarget).each(function() {
+				if($(this).length) {
+					empty = false; return false;
+				}
+			});
+
+			if(!empty) {
+				$("form.basket", ev.delegateTarget).on("click", ".btn-primary", function(ev) {
+					$.post($(ev.delegateTarget).attr("action"), $(ev.delegateTarget).serialize(), function(data) {
+						Aimeos.createContainer(AimeosBasketStandard.updateBasket(data));
+					});
+
+					return false;
+				});
+
+				Aimeos.createOverlay();
+				Aimeos.createContainer($('<div class="catalog-list catalog-list-items">')
+					.append($('<div class="list-items list">').append(ev.delegateTarget)) );
+				return false;
+			}
+		});
+	},
+
+
+	/**
 	 * Switches product images on hover
 	 */
 	setupImageSwitch: function() {
@@ -1769,7 +1802,7 @@ AimeosCatalogList = {
 						url: infiniteUrl
 					}).fail( function() {
 						list.data('infinite-url', infiniteUrl);
-					}).done( function( response ) {
+					}).done( function(response) {
 
 						var nextPage = $(response);
 						var nextUrl = nextPage.find('.catalog-list-items').data( 'infinite-url' );
@@ -1784,12 +1817,50 @@ AimeosCatalogList = {
 	},
 
 
+	setupPinned: function() {
+
+		$(".catalog-list-items .product").on("click", ".btn-pin", function(ev) {
+
+			var url;
+			var el = $(this);
+
+			if(el.hasClass('active')) {
+				el.removeClass('active');
+				url = el.data('rmurl');
+			} else {
+				el.addClass('active');
+				url = el.attr('href');
+			}
+
+			if(!url) {
+				return true;
+			}
+
+			$.ajax({
+				url: url
+			}).done( function(response) {
+				var doc = document.createElement("html");
+				doc.innerHTML = response;
+
+				var pinned = $(".catalog-session-pinned", doc);
+				if(pinned) {
+					$('.catalog-session-pinned').replaceWith(pinned);
+				}
+			});
+
+			return false;
+		});
+	},
+
+
 	/**
 	 * Initializes the catalog list actions
 	 */
 	init: function() {
+		this.setupAddBasket();
 		this.setupImageSwitch();
 		this.setupInfiniteScroll();
+		this.setupPinned();
 	}
 };
 

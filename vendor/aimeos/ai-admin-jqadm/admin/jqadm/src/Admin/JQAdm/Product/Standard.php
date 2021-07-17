@@ -24,8 +24,7 @@ class Standard
 	extends \Aimeos\Admin\JQAdm\Common\Admin\Factory\Base
 	implements \Aimeos\Admin\JQAdm\Common\Admin\Factory\Iface
 {
-
-    /**
+	/**
 	 * Adds the required data used in the template
 	 *
 	 * @param \Aimeos\MW\View\Iface $view View object

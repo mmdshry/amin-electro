@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
-use Aimeos\Shop\Base\Support;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -14,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+        // 'App\Model' => 'App\Policies\ModelPolicy',
     ];
 
     /**
@@ -26,13 +25,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        // Keep the lines before
-
         Gate::define('admin', function($user, $class, $roles) {
             if( isset( $user->superuser ) && $user->superuser ) {
                 return true;
             }
-            return app(Support::class)->checkUserGroup($user, $roles );
+            return app( '\Aimeos\Shop\Base\Support' )->checkUserGroup( $user, $roles );
         });
     }
 }
